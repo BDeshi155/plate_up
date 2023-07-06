@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+<title>HOME PlateUp!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .w3-lobster {
+    font-family: "Lobster", Sans-serif;
+    font-family: "Tangerine", serif;
+  }
+  
+  /* Center the loader */
+  #loader {
+position: absolute;
+left: 50%;
+top: 50%;
+right: 50%;
+bottom: 50%;
+z-index: 1;
+width: 65px;
+height: 65px;
+border: 10px solid #000000;
+border-radius: 50%;
+border-top: 10px solid #ffffff;
+border-bottom: 10px solid #000000;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+
+}
+</style>
+</head>
+<body id="myPage" onload="myFunction(); checkModalDisplay()" style="margin: 0;">
+
+  <div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="index.html" class="w3-bar-item w3-button w3-white"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Restaurents</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Job <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="../Job/login.html" target="_blank" class="w3-bar-item w3-button">Login</a>
+      <a href="../Job/index.html" target="_blank" class="w3-bar-item w3-button">Sign Up</a>
+    </div>
+  </div>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Feedback</a>
+  <a href="#ajker_offer" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i> Ajker Offer!</i></a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Login <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="../Login/login.html" target="_blank" class="w3-bar-item w3-button">Login</a>
+      <a href="../Login/signup.html" target="_blank" class="w3-bar-item w3-button">Sign Up</a>
+    </div>
+  </div>
+    <div style="float: right;">
+      <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
+      <button class="w3-bar-item w3-button w3-black w3-mobile"><i class="fa fa-search"></i></button>
+      <a href="../User account/index2.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-greyscale" title="My Account">
+        <img src="../Customer_account/image.png" class="w3-circle" style="height:15px;width:15px" alt="Avatar">
+      </a>
+    </div>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Restaurants</a>
+    <a href="#work" class="w3-bar-item w3-button">About</a>
+    <a href="../Job/index.html" class="w3-bar-item w3-button">Find Job</a>
+    <a href="#contact" class="w3-bar-item w3-button">Feedback</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity w3-greyscale-min">
+  <video src="vdo1.mp4" autoplay loop muted plays-inline style="width: 100%; min-height: 350px; max-height: 600px; object-fit: cover;"></video>
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+    
+  </div>
+</div>
+
+<!-- Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-teal w3-display-container"> 
+        <span onclick="closeModal()" class="w3-button w3-white w3-display-topright"><i class="fa fa-remove"></i></span>
+        <h4>Thank You for visiting Our Website.</h4>
+        <h5>Want to order food!<i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-container">
+        
+        <p>Do you already have an Account.<a class="w3-text-black" href="../Login/index3 login.html">Login </a> Here!</p>
+        <p>Do you have not create an Account.<a class="w3-text-black" href="../Login/index2 signup.html">Sign up </a> Here!</p>
+      </div>
+      <footer class="w3-container w3-white">
+        <p>Happy Team. Plate UP!</p>
+      </footer>
+    </div>
+  </div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team" style="background-color: black; margin-top: -10px;">
+  <h2 style="color: white;">Our Restaurants</h2>
+  <p style="color: white;">Meet the Restaurants - our Primes:</p>
+
+  <div class="w3-row"><br><br> 
+
+    <div class="w3-quarter" style="margin-top: 40px;">
+      <a href="../Subway/subway.html" target="_blank" rel="noopener noreferrer">
+        <img src="subway.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Subway</h2>
+      </a>
+    </div>
+    <div class="w3-quarter">
+      <a href="../KFC/kfc.php" target="_blank" rel="noopener noreferrer">
+        <img src="kfc5.png" alt="Boss" style="width:75%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">KFC</h2>
+      </a>
+    </div>
+
+    <div class="w3-quarter">
+      <a href="../Burger King/burger.html" target="_blank" rel="noopener noreferrer">
+        <img src="burgerking2.png" alt="Boss" style="width:75%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Burger King</h2>
+      </a>
+    </div>
+    
+    <div class="w3-quarter" style="margin-top: 65px;">
+      <a href="../Coffee House/coffee.html" target="_blank" rel="noopener noreferrer">
+        <img src="coffee_house2.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Coffee House</h2>
+      </a>
+    </div>
+    <div class="w3-quarter">
+      <a href="../Dominos/dominos.html" target="_blank" rel="noopener noreferrer">
+        <img src="dominos.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Domminos</h2>
+      </a>
+    </div>
+    <div class="w3-quarter" style="margin-top: 40px;">
+      <a href="../Foodland/foodland.html" target="_blank" rel="noopener noreferrer">
+        <img src="foodland2.png" alt="Boss" style="width:45%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Foodland</h2>
+      </a>
+    </div>
+    <div class="w3-quarter" style="margin-top: 10px;">
+      <a href="../Dunkin/dunkin.html" target="_blank" rel="noopener noreferrer">
+        <img src="duckin.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Dunkin Donuts</h2>
+      </a>
+    </div>
+    <div class="w3-quarter" style="margin-top: -15px;">
+      <a href="../Kudos/kudos.html" target="_blank" rel="noopener noreferrer">
+        <img src="kudos2.png" alt="Boss" style="width:40%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Kudos</h2>
+      </a>
+    </div>
+    <div class="w3-quarter" style="margin-top: 30px;">
+      <a href="../Taco/taco.html" target="_blank" rel="noopener noreferrer">
+        <img src="taco_bell2.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Taco Bell</h2>
+      </a>
+    </div>
+
+    <div class="w3-quarter">
+      <a href="../Chipotle/chipotle.html" target="_blank" rel="noopener noreferrer">
+        <img src="Chipotle.png" alt="Boss" style="width:75%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;margin-top: -20px;">Chipotle</h2>
+      </a>
+    </div>
+    
+
+    
+
+  </div>
+  <p><a href="index7 extend restaurant.html" target="_blank" rel="noopener noreferrer"><button class="w3-button w3-round-xlarge" style="color: white;">See More Restaurants →</button></a></p>
+</div>
+
+
+<!-- Work Row -->
+<div class="w3-row w3-white" id="work" style="margin-bottom: -20px; margin-top: 40px;">
+  <div class="w3-col s3">
+    <img src="logo.png" alt="" style="height: 350px; width: 350px; margin-left: 140px;">
+  </div>
+
+  <div class="w3-col s9" >
+    <h2 style="margin-left: 120px;">About Us!</h2>
+  
+    <p id="text" style="margin-left: 120px;">
+      PlateUp is a fast-growing food delivery platform that aims to revolutionize the way people experience food. 
+      We are passionate about connecting food lovers with a diverse range of culinary delights, right at their doorstep. Our mission is to make food delivery convenient, reliable, and delightful for our customers. We partner with the best local restaurants, cafes, and eateries to bring you an extensive menu of mouthwatering dishes. 
+      From savory burgers and pizzas to exotic sushi and vegan options, we have something to satisfy every craving.
+      At PlateUp, we believe in the power of technology to enhance your food ordering experience. Our user-friendly website and mobile app make it effortless for you to browse through menus, place orders, and track deliveries in real-time. We prioritize seamless and secure transactions, ensuring that your personal information and payment details are protected.
+    </p>
+
+    <p class="w3-animate-bottom" id="hiddenText" style="display: none; margin-left: 120px; animation-duration: 0.5s;">
+      Whether you're a busy professional looking for a quick lunch or a family planning a cozy dinner at home, PlateUp is here to serve you. Join our food-loving community today and experience the convenience and joy of PlateUp! 
+      <br><br>
+      <a href="../Login/index4 about us.html" target="_blank" rel="noopener noreferrer" ><i>PlateUp! Admins.</i></a>      
+    </p>
+    <button class="w3-button w3-white w3-border w3-border-black w3-round-large" onclick="toggleText()" id="seeMoreBtn" style="margin-left: 120px;">See More</button>
+    <br><br>
+    
+  </div>
+
+<!--Ajker Offer-->
+
+<div id="ajker_offer" class="w3-content w3-section" style="max-width:500px">
+  <p class="w3-display-center"><h1><b>Ajker Offer</b></h1></p>
+
+  <img class="mySlides w3-animate-right" src="Friday Special!.png" style="width:100%">
+  <img class="mySlides w3-animate-right" src="dominos02.png" style="width:100%">
+  <img class="mySlides w3-animate-right" src="Burger dill.png" style="width:100%">
+</div>
+
+
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 t w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-black w3-bottombar">Contact Us</span></div>
+      <p><i class="fa fa-map-marker w3-text-black w3-xlarge"></i>&nbsp;&nbsp;North South University</p>
+      <p><i class="fa fa-phone w3-text-black w3-xlarge"></i>&nbsp;&nbsp;+00 1515151515</p>
+      <p style="cursor: pointer;"><i class="fa fa-envelope-o w3-text-black w3-xlarge" ></i>&nbsp;&nbsp;plateup.service@gmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      <h3>Drop a Feedback Here</h3>
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Feedback</label>
+        <input class="w3-input w3-padding-32" type="text" name="Message" required>
+      </div>  
+      
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <br><br>
+  
+  <a href="#" class="ga-bottom">Copyright 2023</a> by PlateUp! Data. All Rights Reserved.<br>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-white w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+</div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function toggleText() {
+    var hiddenText = document.getElementById("hiddenText");
+    var seeMoreBtn = document.getElementById("seeMoreBtn");
+
+    if (hiddenText.style.display === "none") {
+      hiddenText.style.display = "block";
+      seeMoreBtn.innerText = "See Less";
+    } else {
+      hiddenText.style.display = "none";
+      seeMoreBtn.innerText = "See More";
+    }
+  }
+
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 1500);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000);    
+}
+
+function checkModalDisplay() {
+      // Check if the modal has been shown before
+      var isModalShown = localStorage.getItem('modalShown');
+
+      if (!isModalShown) {
+        // Modal has not been shown before, display it
+        var modal = document.getElementById('id01');
+        modal.style.display = 'block';
+
+        // Set the flag in local storage to indicate that the modal has been shown
+        localStorage.setItem('modalShown', true);
+      }
+    }
+
+    function closeModal() {
+      var modal = document.getElementById('id01');
+      modal.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

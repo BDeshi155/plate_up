@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<title>PlateUp! Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .w3-lobster {
+    font-family: "Lobster", Sans-serif;
+    font-family: "Tangerine", serif;
+  }
+  
+  /* Center the loader */
+  #loader {
+position: absolute;
+left: 50%;
+top: 50%;
+right: 50%;
+bottom: 50%;
+z-index: 1;
+width: 65px;
+height: 65px;
+border: 10px solid #000000;
+border-radius: 50%;
+border-top: 10px solid #ffffff;
+border-bottom: 10px solid #000000;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+}
+</style>
+<body id="myPage"  onload="myFunction()" style="margin:0;">
+  <div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="index.html" class="w3-bar-item w3-button w3-white"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Restaurents</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Feedback</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Login <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="../index3 login.html" class="w3-bar-item w3-button">Log In</a>
+      <a href="../index2 signup.html" class="w3-bar-item w3-button">Sign Up</a>
+    </div>
+  </div>
+    <div style="float: right;">
+      <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
+      <button class="w3-bar-item w3-button w3-black w3-mobile">
+        <i class="fa fa-search"></i></button>
+      <a href="../User account/index2.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-greyscale" title="My Account">
+        <img src="../User account/image.png" class="w3-circle" style="height:15px;width:15px" alt="Avatar">
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Restaurents</a>
+    <a href="#work" class="w3-bar-item w3-button">About</a>
+    <a href="#contact" class="w3-bar-item w3-button">Feedback</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team" style="background-color: black; margin-top: -15px;">
+  <h2 style="color: white;">All Restaurants</h2>
+
+  <div class="w3-row"><br><br> 
+
+    <div class="w3-quarter" style="margin-top: 40px;">
+      <a href="../Subway/subway.php" target="_blank" rel="noopener noreferrer"><img src="subway.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Subway</h2></a>
+    </div>
+    <div class="w3-quarter">
+      <a href="../KFC/kfc.php" target="_blank" rel="noopener noreferrer">
+        <img src="kfc5.png" alt="Boss" style="width:75%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">KFC</h2>
+      </a>
+    </div>
+
+    <div class="w3-quarter">
+      <a href="../Burger King/burger.php" target="_blank" rel="noopener noreferrer"><img src="burgerking2.png" alt="Boss" style="width:75%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Burger King</h2></a>
+    </div>
+    
+    <div class="w3-quarter" style="margin-top: 65px;">
+      <img src="duckin.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity"><br><br><br>
+      <h2 style="color: white;">Dunkin Donuts</h2>
+    </div>
+   
+    </div>
+    
+    <div class="w3-quarter" style="margin-top: 20px;">
+      <a href="../Kudos/kudos.php" target="_blank" rel="noopener noreferrer">
+        <img src="kudos2.png" alt="Boss" style="width:40%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+      <h2 style="color: white;">Kudos</h2>
+      </a>
+    </div>
+    <div class="w3-quarter" style="margin-top: 50px;">
+      <a href="../Taco/taco.php" target="_blank" rel="noopener noreferrer"><img src="taco_bell2.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Taco Bell</h2></a>
+    </div>
+
+    <div class="w3-quarter" style="margin-top: 40px;">
+      <a href="../Chipotle/chipotle.php" target="_blank" rel="noopener noreferrer"><img src="Chipotle.png" alt="Boss" style="width: 65%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;margin-top: -10px;">Chipotle</h2></a>
+    </div>
+
+    
+
+      <div class="w3-quarter">
+        <img src="PizzaHut.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Pizza Hut</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 50px;">
+        <a href="../Foodland/foodland.php" target="_blank" rel="noopener noreferrer"><img src="foodland2.png" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+          <h2 style="color: white;">Food Land</h2></a>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 5px;">
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="Starbucks.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+          <h2 style="color: white;">Starbucks</h2></a>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 5px;">
+        <img src="Chatime.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Chatime</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 65px;">
+        <img src="KacchiBhai.PNG" alt="Boss" style="width:30%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity"><br>
+         <h2 style="color: white;">Kacchi Bhai</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 80px;">
+        <img src="Sultans Dine.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Sultan's Dine</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 80px;">
+        <a href="../Dominos/dominos.php" target="_blank" rel="noopener noreferrer"><img src="Dominos2.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+          <h2 style="color: white;">Dominos</h2></a>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 80px;">
+        <img src="Chillox.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Chillox</h2>
+      </div>
+
+      <div class="w3-quarter"style="margin-top: 80px;">
+        <img src="Nandos logo.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Nandos</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 80px;">
+        <img src="SteakHouse.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Steak House</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 60px;">
+        <img src="EdenCafe.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Eden Cafe</h2>
+      </div> 
+
+      <div class="w3-quarter" style="margin-top: 65px;">
+        <img src="ForestLounge.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Forest Lounge</h2>
+      </div>
+
+      <div class="w3-quarter"style="margin-top: 80px;">
+        <img src="YumCha.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">YumCha</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 70px;">
+        <img src="Cheez.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Cheez</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 100px;">
+        <img src="Fish N Co.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Fish N Co</h2>
+      </div> 
+
+      <div class="w3-quarter" style="margin-top: 65px;">
+        <img src="Herfy.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Herfy</h2>
+      </div>
+
+      <div class="w3-quarter" style="margin-top: 65px;">
+        <img src="McDonalds.PNG" alt="Boss" style="width:35%; transition: transform 0.3s ease-in-out; background-color: black;" onmouseover="this.style.transform = 'scale(1.2)';" onmouseout="this.style.transform = 'scale(1)';" class="w3-circle w3-hover-opacity">
+        <h2 style="color: white;">Mc Donald's</h2>
+      </div>
+
+      
+
+</div>
+  
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-16 w3-theme-d2 w3-centre">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Instagram"><i class="fa fa-instagram"></i></a>
+  
+<div style="position:relative;bottom:40px;z-index:1;" class="w3-tooltip w3-right">
+  <span class="w3-text w3-padding w3-white w3-hide-small">Go To Top</span>   
+  <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+  <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+</div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function toggleText() {
+    var hiddenText = document.getElementById("hiddenText");
+    var seeMoreBtn = document.getElementById("seeMoreBtn");
+
+    if (hiddenText.style.display === "none") {
+      hiddenText.style.display = "block";
+      seeMoreBtn.innerText = "See Less";
+    } else {
+      hiddenText.style.display = "none";
+      seeMoreBtn.innerText = "See More";
+    }
+  }
+
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 1500);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000);    
+}
+</script>
+
+</body>
+</html>
