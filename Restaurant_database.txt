@@ -1,0 +1,445 @@
+INSERT INTO chipotle (items, price)
+VALUES
+    ('Burrito', 725),
+    ('Bowl', 725),
+    ('Tacos (3 pack)', 725),
+    ('Salad', 300),
+    ('Quesadilla', 600),
+    ('Chips & Guacamole', 325),
+    ('Chips & Salsa', 275),
+    ('Barbacoa', 899),
+    ('Carnitas', 899),
+    ('Chicken', 500),
+    ('Sofritas', 150),
+    ('Steak', 320),
+    ('Vegetarian', 450),
+    ('White Rice', 180),
+    ('Brown Rice', 180);
+
+----------------------x-------------------------------
+
+INSERT INTO dominos (item, price)
+VALUES ('Pepperoni', '210'),
+('BBQ Chicken', '279'),
+('Veggie', '390'),
+('Hawaiian', '299'),
+('Chicken Alfredo', '349'),
+('Margheritta', '250'),
+('Bread Sticks', '120'),
+('Boneless Chicken', '90'),
+('Chicken Wings', '160'),
+('Pasta', '20'),
+('Lava Cake', '20'),
+('Cookies', '20'),
+('CocaCola', '15'),
+('Sprite', '15'),
+('Fanta', '15');
+
+----------------------x-------------------------------
+
+INSERT INTO dunkindonut (item, price)
+VALUES ('Glazed', '210'),
+('Choco ALL', '100'),
+('Coffee Roll', '130'),
+('Choco Butternut', '175'),
+('Chocolate Marble', '175'),
+('Double Chocolate', '180'),
+('Chocolate Eclair', '125'),
+('Speculoos Blast', '200'),
+('Iced Coffee', '150'),
+('Coffee', '90'),
+('Americano', '150'),
+('Macchiato', '150'),
+('Cappuccino', '150'),
+('Latte', '150'),
+('Iced Cappuccino', '150');
+
+----------------------x-------------------------------
+
+INSERT INTO burgerking (item, price) 
+VALUES
+    ('Whopper', 600),
+    ('Chicken Fries', 250),
+    ('Big King', 499),
+    ('Bacon King', 699),
+    ('Cheeseburger', 200),
+    ('Double Cheeseburger', 230),
+    ('Crispy Chicken Sandwich', 399),
+    ('Spicy Chicken Sandwich', 449),
+    ('Whopper Jr.', 300),
+    ('French Fries', 70),
+    ('Onion Rings', 100),
+    ('Chicken Nuggets (10 piece)', 399),
+    ('Hash Browns', 70),
+    ('Soft Serve Ice Cream', 65),
+    ('Coca-Cola', 25);
+
+----------------------x-------------------------------
+
+INSERT INTO tacobell (item, price)
+Values
+    ('Crunchy Taco', 119),
+    ('Soft Taco', 119),
+    ('Bean Burrito', 139),
+    ('Beef Burrito', 190),
+    ('Cheesy Gordita Crunch', 360),
+    ('Quesarito', 340),
+    ('Chalupa Supreme', 390),
+    ('Mexican Pizza', 410),
+    ('Nachos Supreme', 210),
+    ('Chicken Quesadilla', 450),
+    ('Fiesta Taco Salad', 700),
+    ('Crunchwrap Supreme', 300),
+    ('Cinnamon Twists', 140),
+    ('Cinnabon Delights (4 pack)', 100),
+    ('Baja Blast Mountain Dew', 70);
+
+----------------------x-------------------------------
+
+INSERT INTO Subway (item, price) 
+VALUES
+    ('Italian B.M.T.', 650),
+    ('Meatball Marinara', 599),
+    ('Turkey Breast', 549),
+    ('Chicken Teriyaki', 450),
+    ('Veggie Delite', 350),
+    ('Steak & Cheese', 700),
+    ('Tuna', 400),
+    ('Cold Cut Combo', 400),
+    ('Spicy Italian', 750),
+    ('Subway Club', 800),
+    ('Roast Beef', 630),
+    ('Oven Roasted Chicken', 630),
+    ('Black Forest Ham', 549),
+    ('Sweet Onion Chicken Teriyaki', 629),
+    ('Buffalo Chicken', 629);
+
+---------------------x------------------------------
+
+INSERT INTO kudos (item, price) VALUES
+    ('Classic Burger', 120),
+    ('Chicken Sandwich', 350),
+    ('Veggie Wrap', 230),
+    ('Cheese Fries', 150),
+    ('Onion Rings', 120),
+    ('Milkshake', 180),
+    ('Chocolate Brownie', 99),
+    ('Caesar Salad', 300),
+    ('BBQ Ribs',1250),
+    ('Grilled Salmon', 1125),
+    ('Steak Dinner', 2000),
+    ('Pasta Alfredo', 270),
+    ('Margherita Pizza', 150),
+    ('Garlic Bread', 300),
+    ('Tiramisu', 349);
+
+---------------------x------------------------------
+
+INSERT INTO Starbucks (item_name, price) 
+
+VALUES
+('Caffè Latte', 399),
+('Cappuccino', 429),
+('Americano', 349),
+('Espresso', 299),
+('Mocha', 479),
+('White Chocolate Mocha', 549),
+('Caramel Macchiato', 479),
+('Iced Coffee', 249),
+('Frappuccino', 599),
+('Matcha Green Tea Latte', 499),
+('Chai Tea Latte', 479),
+('Hot Chocolate', 399),
+('Pumpkin Spice Latte', 499),
+('Java Chip Frappuccino', 599),
+('Caramel Frappuccino', 599);
+
+---------------------x------------------------------
+
+INSERT INTO McDonalds (item_name, price) VALUES
+('Big Mac', 499),
+('Quarter Pounder with Cheese', 449),
+('Cheeseburger', 199),
+('Hamburger', 179),
+('McChicken', 349),
+('Filet-O-Fish', 399),
+('Chicken McNuggets (6 pieces)', 299),
+('Chicken McNuggets (10 pieces)', 449),
+('McChicken Deluxe', 479),
+('Spicy McChicken', 399),
+('McVeggie', 349),
+('McFlurry', 249),
+('Apple Pie', 199),
+('Sundae', 229),
+('French Fries (Medium)', 249);
+
+---------------------x------------------------------
+
+INSERT INTO Chatime (item_name, price) VALUES
+('Classic Milk Tea', 290),
+('Pearl Milk Tea', 330),
+('Taro Milk Tea', 350),
+('Honeydew Milk Tea', 360),
+('Matcha Red Bean Milk Tea', 380),
+('Mango Green Tea', 330),
+('Passionfruit Green Tea', 340),
+('Strawberry Pudding Smoothie', 390),
+('Chocolate Mousse Smoothie', 370),
+('Mango Slush', 350),
+('Lychee Yakult', 320),
+('Wintermelon Lemonade', 310),
+('Roasted Milk Tea', 350),
+('Jasmine Green Tea', 300),
+('Brown Sugar Bubble Milk', 380);
+
+---------------------x------------------------------
+
+INSERT INTO PizzaHut (item_name, price) VALUES
+('Pepperoni Pizza', 940),
+('Supreme Pizza', 980),
+('Cheese Lovers Pizza', 920),
+('Veggie Lovers Pizza', 850),
+('BBQ Chicken Pizza', 950),
+('Meat Lovers Pizza', 990),
+('Margherita Pizza', 820),
+('Hawaiian Pizza', 880),
+('Mushroom Pizza', 870),
+('Farmhouse Pizza', 900),
+('Chicken Alfredo Pasta', 750),
+('Spicy BBQ Wings (6 pieces)', 550),
+('Garlic Breadsticks', 350),
+('Caesar Salad', 380),
+('Chocolate Brownie', 420);
+
+---------------------x------------------------------
+
+INSERT INTO Sultans Dine (item_name, price) VALUES
+('Biryani', 450),
+('Kebabs', 350),
+('Chicken Tikka Masala', 550),
+('Butter Chicken', 580),
+('Palak Paneer', 420),
+('Rogan Josh', 590),
+('Seekh Kebab', 380),
+('Dal Makhani', 350),
+('Naan', 70),
+('Chicken Biryani', 470),
+('Mutton Biryani', 580),
+('Paneer Tikka', 410),
+('Gulab Jamun', 180),
+('Rasmalai', 200),
+('Mango Lassi', 220);
+
+---------------------x------------------------------
+
+INSERT INTO KacchiBhai (item_name, price) VALUES
+('Kacchi Biriyani', 600),
+('Beef Tehari', 300),
+('Chicken Bhuna', 350),
+('Morog Polao', 550),
+('Mutton Korma', 650),
+('Rezala', 400),
+('Bhuna Khichuri', 250),
+('Chicken Roast', 450),
+('Beef Kala Bhuna', 380),
+('Fish Fry', 200),
+('Shorshe Ilish', 450),
+('Mutton Tehari', 550),
+('Beef Rezala', 400),
+('Chapli Kebab', 320),
+('Mutton Bhuna', 500);
+
+---------------------x------------------------------
+
+INSERT INTO FoodLand (item_name, price) VALUES
+('Chicken Fried Rice', 400),
+('Beef Chow Mein', 450),
+('Fish Curry', 350),
+('Paneer Tikka Masala', 500),
+('Mutton Biryani', 600),
+('Vegetable Pulao', 300),
+('Shrimp Scampi', 550),
+('Butter Chicken', 450),
+('Beef Steak', 650),
+('Grilled Salmon', 700),
+('Vegetable Stir-Fry', 250),
+('Chicken Shawarma', 350),
+('Cheese Pizza', 400),
+('Pasta Alfredo', 300),
+('Club Sandwich', 350);
+
+---------------------x------------------------------
+
+INSERT INTO Chillox (item_name, price) VALUES
+('Beef/Chicken Burger', 180),
+('Beef/Chicken Burger with cheese', 210),
+('Beef/Chicken Burger Smoky BBQ cheese', 700),
+('Beef/Chicken Burger with Bacon', 350),
+('Beef/Chicken Burger with Sausage', 400),
+('Double Decker Beef/Chicken', 450),
+('Pankha Wings', 550),
+('Fish Tots', 500),
+('Veggie Burger', 400),
+('Caesar Salad', 350),
+('Sprite', 250),
+('Mountain Dew', 300),
+('Pepsi', 250),
+('French Fries', 350),
+('Cold Coffee', 300);
+
+---------------------x------------------------------
+
+INSERT INTO Nandos (item_name, price) VALUES
+('Peri-Peri Chicken', 650),
+('Espetada', 750),
+('Grilled Chicken Wrap', 450),
+('Portuguese Salad', 350),
+('Butterfly Chicken Burger', 550),
+('Halloumi Skewers', 400),
+('Quarter Chicken Meal', 600),
+('Mozambican Coconut Curry', 700),
+('Chicken Caesar Wrap', 500),
+('Feta and Avocado Salad', 450),
+('Chicken Wings', 350),
+('Grilled Veggie Burger', 400),
+('Spicy Rice', 200),
+('Peri-Peri Fries', 250),
+('Garlic Bread', 200);
+
+---------------------x------------------------------
+
+INSERT INTO SteakHouse (item_name, price) VALUES
+('Ribeye Steak', 2500),
+('Filet Mignon', 2800),
+('T-Bone Steak', 2200),
+('New York Strip', 2300),
+('Porterhouse Steak', 2700),
+('Sirloin Steak', 2000),
+('Prime Rib', 2400),
+('Pepper Steak', 2100),
+('Garlic Butter Steak', 1900),
+('Mushroom Swiss Steak', 2000),
+('BBQ Ribs', 1800),
+('Grilled Salmon', 1600),
+('Lobster Tail', 2500),
+('Surf and Turf', 2800),
+('Grilled Chicken Breast', 1500);
+
+---------------------x------------------------------
+
+INSERT INTO EdenCafe (Item, Price)
+VALUES
+    ('Grilled Salmon', 1100),
+    ('Beef Tenderloin Steak', 1300),
+    ('Chicken Piccata', 1200),
+    ('Pesto Pasta', 900),
+    ('Caesar Salad', 800),
+    ('Mushroom Risotto', 1000),
+    ('Caprese Panini', 700),
+    ('Lemon Herb Roasted Chicken', 1200),
+    ('Shrimp Scampi', 1300),
+    ('Vegetable Lasagna', 1100),
+    ('Fish and Chips', 1100),
+    ('Mediterranean Platter', 1300),
+    ('Lamb Chops', 1400),
+    ('Roasted Vegetable Quinoa Bowl', 1000),
+    ('Tiramisu', 900);
+
+---------------------x------------------------------
+
+INSERT INTO ForestLoungeMenu (Item, Price)
+VALUES
+    ('Grilled Chicken', 350),
+    ('Spaghetti Carbonara', 400),
+    ('Margherita Pizza', 450),
+    ('Beef Burger', 300),
+    ('Fish and Chips', 500),
+    ('Caesar Salad', 250),
+    ('Vegetable Stir Fry', 200),
+    ('Mushroom Risotto', 350),
+    ('Chicken Alfredo', 400),
+    ('BBQ Ribs', 450),
+    ('Prawn Curry', 550),
+    ('Paneer Tikka', 300),
+    ('Lamb Biryani', 450),
+    ('Vegetable Lasagna', 350),
+    ('Tiramisu', 250);
+
+---------------------x------------------------------
+
+INSERT INTO YumCha (item_name, price) VALUES
+('Steamed Shrimp Dumplings', 250),
+('Pork Siu Mai', 220),
+('BBQ Pork Buns', 180),
+('Chicken Feet', 200),
+('Egg Tarts', 150),
+('Sticky Rice in Lotus Leaf', 280),
+('Turnip Cake', 190),
+('Cheung Fun', 210),
+('Radish Pastry', 180),
+('Sesame Balls', 170),
+('Shrimp Rice Rolls', 240),
+('Beef Noodles', 270),
+('Wonton Noodle Soup', 230),
+('Shrimp Toast', 200),
+('Fried Tofu Skin', 160);
+
+---------------------x------------------------------
+
+INSERT INTO Cheez (item_name, price) VALUES
+('Classic Margherita', 699),
+('The Pepperonia', 849),
+('All Bout the Shrooms', 849),
+('Chicken Alfredo', 899),
+('Bolognese', 150),
+('Thai Pie', 280),
+('The 4 Cheez', 1049),
+('The SMG', 1199),
+('Nagatastic BBQ', 1099),
+('Hot Craby Prawnstar', 1099),
+('Liquid Gold', 449),
+('Spicy Sausage', 499),
+('Cola', 50),
+('Fanta', 50),
+('Mountain Dew', 50);
+
+---------------------x------------------------------
+
+INSERT INTO FishnCo (item_name, price) VALUES
+('Fish & Chips', 750),
+('Grilled Salmon', 950),
+('Lemon Butter Fish', 850),
+('Seafood Platter', 1200),
+('Prawn Aglio Olio', 850),
+('Crab Cakes', 800),
+('Fish Burger', 550),
+('Fish Tacos', 600),
+('Clam Chowder Soup', 400),
+('Grilled Shrimp Skewers', 900),
+('Seafood Paella', 1100),
+('Fisherman's Basket', 1000),
+('Cajun Fish', 800),
+('Garlic Butter Prawns', 900),
+('Smoked Salmon Salad', 700);
+
+---------------------x------------------------------
+
+INSERT INTO Herfy (item_name, price) VALUES
+('Cheeseburger', 350),
+('Chicken Fillet Sandwich', 300),
+('Beef Burger', 400),
+('Chicken Nuggets (6 pcs)', 200),
+('Grilled Chicken Meal', 600),
+('Mega Combo Meal', 900),
+('Fish Fillet Sandwich', 350),
+('Shawarma Sandwich', 250),
+('Chicken Shawarma Platter', 500),
+('Beef Shawarma Platter', 550),
+('Chicken Tikka', 400),
+('Beef Tikka', 450),
+('Mixed Grill', 700),
+('Chicken Caesar Salad', 350),
+('Chicken Pasta', 400);
+
+
+

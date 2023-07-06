@@ -1,0 +1,50 @@
+INSERT INTO kfc (item, price)
+VALUES ('Tandoori Zinger', '399'),
+('Texas BBQ Zinger', '399'),
+('Moroccan Zinger', '399'),
+('Mexican Zinger', '399'),
+('Kashundi Zinger', '399'),
+('Crispy Chicken 1pcs', '159'),
+('Crispy Chicken 2pcs', '299'),
+('Crispy Chicken 3pcs', '458'),
+('Crispy Chicken 4pcs', '589'),
+('Hot Wings 6pcs', '299'),
+('Spicy Mayo', '29'),
+('Dynamite Mayo', '29'),
+('Mayo-1', '29'),
+('Mayo-2', '29'),
+('Mayo-3', '29');
+
+<table>
+    <tr>
+        <th>No.</th>
+        <th>Items</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    <?php
+    $conn = new mysqli("localhost", "root", "", "plate_up2");
+
+    $sql = "SELECT id, item, price FROM kfc";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                   <td>".$row["id"]."</td>
+                   <td>".$row["item"]."</td>
+                   <td>&#8377;".$row["price"]."</td>
+                   <td><button>+</button></td>
+                  </tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "0 results";
+    }
+    ?>
+</table>
+
+"class="w3-button w3-border w3-hover-black add-to-cart-btn"
+Is it possible to add this class in button '+'
+
+echo "<td><button class='w3-button w3-border w3-hover-black add-to-cart-btn'>+</button></td>";
